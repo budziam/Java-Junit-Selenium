@@ -13,21 +13,20 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <groupId>com.saucelabs</groupId>
+            <artifactId>saucebindings-junit4</artifactId>
+            <version>1.5.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>2.53.1</version>
-            <scope>test</scope>
+            <version>4.25.0</version>
         </dependency>
         <dependency>
-            <groupId>com.saucelabs</groupId>
-            <artifactId>sauce_junit</artifactId>
-            <version>2.1.25</version>
+            <groupId>com.titusfortner</groupId>
+            <artifactId>selenium-logger</artifactId>
+            <version>2.4.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -51,6 +50,14 @@
                     <redirectTestOutputToFile>false</redirectTestOutputToFile>
                 </configuration>
                 <version>2.12.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
