@@ -46,6 +46,10 @@ public class TestBase {
 
         sauceOptions.put("username", System.getenv("SAUCE_USERNAME"));
         sauceOptions.put("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
+        if (System.getenv("TUNNEL_IDENTIFIER") != null) {
+            System.out.print("Using Sauce Connect Proxy: " + System.getenv("TUNNEL_IDENTIFIER"));
+            sauceOptions.put("tunnelName", System.getenv("TUNNEL_IDENTIFIER"));
+        }
         sauceOptions.put("name", testName.getMethodName());
         sauceOptions.put("screenResolution", "1440x900");
         sauceOptions.put("seleniumVersion", "4.22.0");
