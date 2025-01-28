@@ -33,7 +33,7 @@ jobs:
       with:
         username: ${{ secrets.SAUCE_USERNAME }}
         accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
-        tunnelName: mbudziak0github-action
+        tunnelName: ${{ secrets.TUNNEL_IDENTIFIER }}
     
     - name: Build with Maven
       run: mvn test
