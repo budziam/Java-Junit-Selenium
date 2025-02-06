@@ -34,11 +34,12 @@ jobs:
         cache: maven
 
     - name: Sauce Proxy
-      uses: saucelabs/sauce-connect-action@v2
+      uses: saucelabs/sauce-connect-action@0ddf700f252f10c8275cbc2e85a8ec7460e7d7bb
       with:
         username: ${{ secrets.SAUCE_USERNAME }}
         accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
         tunnelName: ${{ secrets.TUNNEL_IDENTIFIER }}
+        region: us
     
     - name: Build with Maven
       run: mvn test
