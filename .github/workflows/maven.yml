@@ -34,7 +34,7 @@ jobs:
         cache: maven
 
     - name: Sauce Proxy
-      uses: saucelabs/sauce-connect-action@v3.0.0
+      uses: saucelabs/sauce-connect-action@v3
       with:
         username: ${{ secrets.SAUCE_USERNAME }}
         accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
